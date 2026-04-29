@@ -7,6 +7,7 @@ import { Slide, slideSrc } from '@/lib/content';
 
 export default function SlideViewer({ slides }: { slides: Slide[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imgError, setImgError] = useState(false);
 
   const nextSlide = useCallback(() => {
     if (currentIndex < slides.length - 1) {
@@ -30,6 +31,10 @@ export default function SlideViewer({ slides }: { slides: Slide[] }) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [nextSlide, prevSlide]);
 
+  useEffect(() => {
+    setImgError(false);
+  }, [currentIndex]);
+
   if (!slides || slides.length === 0) return <div>슬라이드가 없습니다.</div>;
 
   const currentSlide = slides[currentIndex];
@@ -39,12 +44,13 @@ export default function SlideViewer({ slides }: { slides: Slide[] }) {
       {/* Slide Container */}
       <div className="relative w-full max-w-4xl aspect-[4/3] bg-panel border border-border rounded-md overflow-hidden shadow-sm">
         <Image
-          src={slideSrc(currentSlide)}
+          src={imgError ? "/placeholder-slide.png" : slideSrc(currentSlide)}
           alt={`슬라이드 ${currentIndex + 1}`}
           fill
           priority={currentIndex === 0}
           loading={currentIndex === 0 ? "eager" : "lazy"}
           className="object-contain"
+          onError={() => setImgError(true)}
         />
         
         {/* Navigation Overlays */}

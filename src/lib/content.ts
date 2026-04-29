@@ -10,6 +10,7 @@ export type Lesson = {
   title: string;
   description: string;
   slides: Slide[];
+  links?: { title: string; url: string }[];
 };
 
 export type Chapter = {
@@ -34,7 +35,8 @@ export const chapters: Chapter[] = [
         number: '001',
         title: '본인 지메일 계정 준비',
         description: '이후 모든 도구(Antigravity, GitHub, Vercel, Google Sheets)에 연동할 본인 명의 지메일 계정을 준비합니다.',
-        slides: [{ part: 'part1', number: 5 }]
+        slides: [{ part: 'part1', number: 5 }],
+        links: [{ title: 'Google 메일 (Gmail)', url: 'https://mail.google.com' }]
       },
       {
         slug: 'install-antigravity',
@@ -55,28 +57,32 @@ export const chapters: Chapter[] = [
         number: '004',
         title: 'Node.js 설치',
         description: '웹앱을 로컬에서 실행하려면 Node.js 가 필요합니다. LTS 버전을 다운로드 받아 설치합니다.',
-        slides: [{ part: 'part1', number: 10 }]
+        slides: [{ part: 'part1', number: 10 }],
+        links: [{ title: 'Node.js 다운로드', url: 'https://nodejs.org' }]
       },
       {
         slug: 'signup-github',
         number: '005',
         title: 'GitHub 가입',
         description: '코드를 저장·공유하고 Vercel에 배포하기 위한 GitHub 무료 계정을 만듭니다.',
-        slides: [{ part: 'part1', number: 11 }, { part: 'part1', number: 12 }, { part: 'part1', number: 13 }, { part: 'part1', number: 14 }]
+        slides: [{ part: 'part1', number: 11 }, { part: 'part1', number: 12 }, { part: 'part1', number: 13 }, { part: 'part1', number: 14 }],
+        links: [{ title: 'GitHub 홈페이지', url: 'https://github.com' }]
       },
       {
         slug: 'create-repo',
         number: '006',
         title: 'GitHub 리포지토리 생성',
         description: '프로젝트 코드를 담을 빈 리포지토리를 만들고 주소를 복사해 둡니다. 이 주소가 앤비와 Vercel을 연결하는 키입니다.',
-        slides: [{ part: 'part1', number: 15 }, { part: 'part1', number: 16 }, { part: 'part1', number: 17 }]
+        slides: [{ part: 'part1', number: 15 }, { part: 'part1', number: 16 }, { part: 'part1', number: 17 }],
+        links: [{ title: 'GitHub 새 리포지토리 생성', url: 'https://github.com/new' }]
       },
       {
         slug: 'install-git',
         number: '007',
         title: 'Git 설치 (Windows / macOS)',
         description: '로컬 PC에서 GitHub와 통신하려면 Git이 필요합니다. Windows는 Git for Windows, Mac은 Homebrew 기반으로 설치합니다.',
-        slides: [{ part: 'part1', number: 20 }, { part: 'part1', number: 21 }, { part: 'part1', number: 22 }, { part: 'part1', number: 23 }, { part: 'part1', number: 24 }]
+        slides: [{ part: 'part1', number: 20 }, { part: 'part1', number: 21 }, { part: 'part1', number: 22 }, { part: 'part1', number: 23 }, { part: 'part1', number: 24 }],
+        links: [{ title: 'Git 다운로드', url: 'https://git-scm.com' }]
       },
       {
         slug: 'connect-antigravity-github',
@@ -99,28 +105,32 @@ export const chapters: Chapter[] = [
         number: '101',
         title: '구글 드라이브 + 스프레드시트 작업',
         description: '앱이 다룰 데이터를 담을 구글 스프레드시트를 만들고, 탭과 변수명을 설계합니다.',
-        slides: [{ part: 'part1', number: 32 }, { part: 'part1', number: 33 }]
+        slides: [{ part: 'part1', number: 32 }, { part: 'part1', number: 33 }],
+        links: [{ title: 'Google 스프레드시트', url: 'https://docs.google.com/spreadsheets' }]
       },
       {
         slug: 'tally-survey',
         number: '102',
         title: 'Tally 설문 + 구글 시트 연동',
         description: 'Tally 설문 응답이 자동으로 구글 시트의 Tally_raw 탭에 쌓이도록 설계합니다.',
-        slides: [{ part: 'part1', number: 34 }, { part: 'part1', number: 35 }]
+        slides: [{ part: 'part1', number: 34 }, { part: 'part1', number: 35 }],
+        links: [{ title: 'Tally Form', url: 'https://tally.so' }]
       },
       {
         slug: 'notebooklm-prompt',
         number: '103',
         title: 'NotebookLM에서 슈퍼 프롬프트 생성',
         description: 'NotebookLM에 자료를 올리고, 앱 디자인용 "슈퍼 프롬프트"를 만들어 냅니다.',
-        slides: [{ part: 'part1', number: 36 }]
+        slides: [{ part: 'part1', number: 36 }],
+        links: [{ title: 'NotebookLM', url: 'https://notebooklm.google.com' }]
       },
       {
         slug: 'gemini-gem-designer',
         number: '104',
         title: "Gemini Gem '슈퍼 디자이너 v1' 생성",
         description: 'Gemini Gem으로 v0.app에 보낼 디자인 프롬프트를 자동 생성하는 전용 에이전트를 만듭니다. 엑셀 변수명까지 반영한 정밀한 프롬프트가 결과물입니다.',
-        slides: [{ part: 'part1', number: 37 }, { part: 'part1', number: 38 }, { part: 'part1', number: 39 }, { part: 'part1', number: 40 }]
+        slides: [{ part: 'part1', number: 37 }, { part: 'part1', number: 38 }, { part: 'part1', number: 39 }, { part: 'part1', number: 40 }],
+        links: [{ title: 'Gemini', url: 'https://gemini.google.com' }]
       }
     ]
   },
@@ -136,7 +146,8 @@ export const chapters: Chapter[] = [
         number: '105',
         title: 'v0.app 로그인 + 웹앱 디자인 생성',
         description: 'v0.app(=v0.dev)에 로그인해 챕터 1에서 만든 디자인 프롬프트를 입력합니다. 결과 코드를 ZIP으로 다운로드해 [문서] > [Antigravity] 폴더에 풀어둡니다.',
-        slides: [{ part: 'part1', number: 44 }, { part: 'part1', number: 45 }, { part: 'part1', number: 46 }, { part: 'part1', number: 47 }]
+        slides: [{ part: 'part1', number: 44 }, { part: 'part1', number: 45 }, { part: 'part1', number: 46 }, { part: 'part1', number: 47 }],
+        links: [{ title: 'v0.app (v0.dev)', url: 'https://v0.dev' }]
       },
       {
         slug: 'antigravity-edit',
@@ -150,7 +161,8 @@ export const chapters: Chapter[] = [
         number: '107',
         title: 'Antigravity → GitHub 코드 업로드',
         description: '앤비에서 변경된 코드를 챕터 0에서 만든 GitHub 리포지토리로 푸시합니다. 0단계의 008 작업이 마무리되어 있어야 합니다.',
-        slides: [{ part: 'part1', number: 52 }]
+        slides: [{ part: 'part1', number: 52 }],
+        links: [{ title: 'GitHub (나의 저장소)', url: 'https://github.com' }]
       },
       {
         slug: 'vercel-deploy',
@@ -161,7 +173,8 @@ export const chapters: Chapter[] = [
           { part: 'part1', number: 53 }, { part: 'part1', number: 54 }, { part: 'part1', number: 55 }, { part: 'part1', number: 56 },
           { part: 'part1', number: 57 }, { part: 'part1', number: 58 }, { part: 'part1', number: 59 }, { part: 'part1', number: 60 },
           { part: 'part1', number: 61 }, { part: 'part1', number: 62 }, { part: 'part1', number: 63 }, { part: 'part1', number: 64 }
-        ]
+        ],
+        links: [{ title: 'Vercel Dashboard', url: 'https://vercel.com/dashboard' }]
       }
     ]
   },
@@ -184,7 +197,8 @@ export const chapters: Chapter[] = [
         number: '302',
         title: '구글 시트 준비',
         description: '노션 링크에서 받은 엑셀 파일을 구글 드라이브에 올리고 구글 스프레드시트로 변환합니다. 앱의 탭과 시트의 탭이 1:1로 매칭되어야 합니다.',
-        slides: [{ part: 'part2', number: 11 }]
+        slides: [{ part: 'part2', number: 11 }],
+        links: [{ title: 'Google 드라이브', url: 'https://drive.google.com' }]
       },
       {
         slug: 'gas-prompt',
@@ -198,7 +212,8 @@ export const chapters: Chapter[] = [
         number: '304',
         title: 'Code.gs 작성 + 웹 앱 배포',
         description: '앤비가 생성한 코드를 Code.gs에 붙여 넣고, 앱스 스크립트의 [배포]에서 웹 앱으로 배포한 뒤 URL을 복사합니다.',
-        slides: [{ part: 'part2', number: 19 }, { part: 'part2', number: 20 }, { part: 'part2', number: 21 }, { part: 'part2', number: 22 }, { part: 'part2', number: 23 }, { part: 'part2', number: 24 }, { part: 'part2', number: 25 }, { part: 'part2', number: 26 }]
+        slides: [{ part: 'part2', number: 19 }, { part: 'part2', number: 20 }, { part: 'part2', number: 21 }, { part: 'part2', number: 22 }, { part: 'part2', number: 23 }, { part: 'part2', number: 24 }, { part: 'part2', number: 25 }, { part: 'part2', number: 26 }],
+        links: [{ title: 'Google Apps Script', url: 'https://script.google.com' }]
       },
       {
         slug: 'app-sheet-test',
@@ -221,7 +236,8 @@ export const chapters: Chapter[] = [
         number: '401',
         title: '코드 다운로드 + Antigravity 오픈',
         description: 'v0.app 코드를 다운받아 지정 폴더에 풀고 앤비에서 엽니다. (CHAPTER 3과 동일한 사전 작업)',
-        slides: [{ part: 'part2', number: 35 }, { part: 'part2', number: 36 }, { part: 'part2', number: 37 }, { part: 'part2', number: 38 }, { part: 'part2', number: 39 }, { part: 'part2', number: 40 }]
+        slides: [{ part: 'part2', number: 35 }, { part: 'part2', number: 36 }, { part: 'part2', number: 37 }, { part: 'part2', number: 38 }, { part: 'part2', number: 39 }, { part: 'part2', number: 40 }],
+        links: [{ title: 'v0.dev', url: 'https://v0.dev' }]
       },
       {
         slug: 'console-prompt',
@@ -235,7 +251,8 @@ export const chapters: Chapter[] = [
         number: '403',
         title: '클라우드 콘솔에 새 프로젝트 생성',
         description: '구글 클라우드 콘솔에서 새 프로젝트를 만들고, 프로젝트 ID를 메모합니다.',
-        slides: [{ part: 'part2', number: 45 }, { part: 'part2', number: 46 }, { part: 'part2', number: 47 }, { part: 'part2', number: 48 }, { part: 'part2', number: 49 }, { part: 'part2', number: 50 }]
+        slides: [{ part: 'part2', number: 45 }, { part: 'part2', number: 46 }, { part: 'part2', number: 47 }, { part: 'part2', number: 48 }, { part: 'part2', number: 49 }, { part: 'part2', number: 50 }],
+        links: [{ title: 'Google Cloud Console', url: 'https://console.cloud.google.com' }]
       },
       {
         slug: 'enable-api-service-account',
@@ -256,7 +273,8 @@ export const chapters: Chapter[] = [
         number: '406',
         title: '앱 코드 → 시트 연결 + GitHub 푸시',
         description: '앤비에서 환경변수를 설정하고 GitHub 리포지토리 주소를 본인 것으로 교체한 뒤 푸시합니다. 이후 작업은 다음 챕터의 Vercel 추가 조치로 이어집니다.',
-        slides: [{ part: 'part2', number: 73 }, { part: 'part2', number: 74 }, { part: 'part2', number: 75 }, { part: 'part2', number: 76 }, { part: 'part2', number: 77 }, { part: 'part2', number: 78 }, { part: 'part2', number: 79 }, { part: 'part2', number: 80 }, { part: 'part2', number: 81 }, { part: 'part2', number: 82 }]
+        slides: [{ part: 'part2', number: 73 }, { part: 'part2', number: 74 }, { part: 'part2', number: 75 }, { part: 'part2', number: 76 }, { part: 'part2', number: 77 }, { part: 'part2', number: 78 }, { part: 'part2', number: 79 }, { part: 'part2', number: 80 }, { part: 'part2', number: 81 }, { part: 'part2', number: 82 }],
+        links: [{ title: 'GitHub', url: 'https://github.com' }]
       }
     ]
   },
@@ -272,7 +290,8 @@ export const chapters: Chapter[] = [
         number: '501',
         title: 'Vercel 환경변수 등록',
         description: 'JSON 키와 시트 ID 등 비밀값을 Vercel 프로젝트의 Environment Variables 에 안전하게 등록합니다.',
-        slides: [{ part: 'part2', number: 84 }, { part: 'part2', number: 85 }, { part: 'part2', number: 86 }, { part: 'part2', number: 87 }, { part: 'part2', number: 88 }, { part: 'part2', number: 89 }, { part: 'part2', number: 90 }, { part: 'part2', number: 91 }]
+        slides: [{ part: 'part2', number: 84 }, { part: 'part2', number: 85 }, { part: 'part2', number: 86 }, { part: 'part2', number: 87 }, { part: 'part2', number: 88 }, { part: 'part2', number: 89 }, { part: 'part2', number: 90 }, { part: 'part2', number: 91 }],
+        links: [{ title: 'Vercel Dashboard', url: 'https://vercel.com/dashboard' }]
       },
       {
         slug: 'redeploy-and-verify',
@@ -280,6 +299,14 @@ export const chapters: Chapter[] = [
         title: '재배포 + 동작 확인',
         description: 'Vercel에서 다시 Deploy 하고, 공개 URL에서 시트로의 입출력이 정상 동작하는지 확인합니다. 여기까지가 "웹앱 상용화" 단계입니다.',
         slides: [{ part: 'part2', number: 92 }, { part: 'part2', number: 93 }, { part: 'part2', number: 94 }, { part: 'part2', number: 95 }]
+      },
+      {
+        slug: 'video-beginner-guide',
+        number: '503',
+        title: '동영상 초보자 가이드',
+        description: '지금까지 배운 바이브코딩의 전체 흐름을 영상으로 다시 한 번 복습할 수 있는 초보자용 유튜브 가이드입니다.',
+        slides: [],
+        links: [{ title: '📺 유튜브: 동영상 초보자 가이드 시청하기', url: 'https://www.youtube.com/watch?v=km3aogD7wtI&t=10s' }]
       }
     ]
   }

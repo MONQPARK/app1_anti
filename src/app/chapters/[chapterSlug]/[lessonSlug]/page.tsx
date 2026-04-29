@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { ExternalLink } from 'lucide-react';
 import { getLesson, getNextLesson, getPrevLesson, chapters } from '@/lib/content';
 import SlideViewer from '@/components/SlideViewer';
 import LessonNav from '@/components/LessonNav';
@@ -51,6 +52,24 @@ export default function LessonPage({ params }: { params: { chapterSlug: string; 
 
       {/* Main Slide Viewer */}
       <SlideViewer slides={lesson.slides} />
+
+      {/* External Links */}
+      {lesson.links && lesson.links.length > 0 && (
+        <div className="max-w-4xl mx-auto mt-8 flex flex-wrap gap-4">
+          {lesson.links.map((link, idx) => (
+            <a
+              key={idx}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 bg-panel border border-border hover:border-accent hover:bg-bg rounded-md text-sm font-medium transition-colors"
+            >
+              <ExternalLink className="w-4 h-4 mr-2 text-accent" />
+              {link.title}
+            </a>
+          ))}
+        </div>
+      )}
 
       {/* Navigation */}
       <div className="max-w-4xl mx-auto">
