@@ -1,4 +1,4 @@
-# 바이브코딩 아카데미 (Vibe Coding Academy)
+# 몽규 바이브 코딩 아카데미 (Vibe Coding Academy)
 
 사내 직원이 "이 앱만 따라오면" 바이브코딩으로 앱을 만들고 웹에 배포까지 끝낼 수 있는 단계별 셀프 학습 강의 플랫폼입니다. (Next.js 14 App Router 기반)
 

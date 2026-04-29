@@ -7,7 +7,7 @@ export default function Home() {
     <div className="space-y-16">
       <section className="space-y-6 pt-10 pb-4">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-fg">
-          바이브코딩 아카데미
+          몽규 바이브 코딩 아카데미
         </h1>
         <p className="text-xl font-medium text-muted max-w-2xl">
           Claude → Antigravity → GitHub → Vercel

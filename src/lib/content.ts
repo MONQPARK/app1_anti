@@ -299,11 +299,20 @@ export const chapters: Chapter[] = [
         title: '재배포 + 동작 확인',
         description: 'Vercel에서 다시 Deploy 하고, 공개 URL에서 시트로의 입출력이 정상 동작하는지 확인합니다. 여기까지가 "웹앱 상용화" 단계입니다.',
         slides: [{ part: 'part2', number: 92 }, { part: 'part2', number: 93 }, { part: 'part2', number: 94 }, { part: 'part2', number: 95 }]
-      },
+      }
+    ]
+  },
+  {
+    slug: 'video-guide',
+    number: 6,
+    title: '동영상 초보자 가이드',
+    subtitle: 'Video Beginner Guide',
+    description: '바이브코딩의 전체 흐름을 다시 한 번 복습할 수 있는 추천 유튜브 가이드 영상입니다.',
+    lessons: [
       {
-        slug: 'video-beginner-guide',
-        number: '503',
-        title: '동영상 초보자 가이드',
+        slug: 'beginner-guide',
+        number: '601',
+        title: '동영상 초보자 가이드 시청',
         description: '지금까지 배운 바이브코딩의 전체 흐름을 영상으로 다시 한 번 복습할 수 있는 초보자용 유튜브 가이드입니다.',
         slides: [],
         links: [{ title: '📺 유튜브: 동영상 초보자 가이드 시청하기', url: 'https://www.youtube.com/watch?v=km3aogD7wtI&t=10s' }]

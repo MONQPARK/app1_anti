@@ -28,7 +28,7 @@ export default function Sidebar() {
     <aside className="w-[300px] h-screen sticky top-0 bg-panel border-r border-border overflow-y-auto flex-shrink-0 hidden md:block">
       <div className="p-6">
         <Link href="/" className="flex flex-col mb-8">
-          <span className="text-xl font-bold tracking-tight text-fg">바이브코딩 아카데미</span>
+          <span className="text-xl font-bold tracking-tight text-fg">몽규 바이브 코딩 아카데미</span>
           <span className="text-xs text-muted font-mono mt-1 px-2 py-0.5 bg-codebg rounded w-fit">v1.0</span>
         </Link>
 

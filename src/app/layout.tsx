@@ -5,7 +5,7 @@ import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 
 export const metadata: Metadata = {
-  title: "바이브코딩 아카데미",
+  title: "몽규 바이브 코딩 아카데미",
   description: "누구나 따라하면 웹앱을 만들고 배포할 수 있습니다.",
 };
 
