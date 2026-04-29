@@ -20,13 +20,15 @@ export default function ChapterPage({ params }: { params: { chapterSlug: string 
       <div className="text-sm text-muted mb-8">
         <Link href="/" className="hover:text-fg transition-colors">홈</Link>
         <span className="mx-2">/</span>
-        <span className="text-fg">CHAPTER {chapter.number}</span>
+        <span className="text-fg">{chapter.slug === 'video-guide' ? chapter.title : `CHAPTER ${chapter.number}`}</span>
       </div>
 
       <div className="space-y-4">
-        <span className="font-mono text-xs tracking-wider text-accent bg-accent/10 px-2 py-1 rounded">
-          CHAPTER {chapter.number}
-        </span>
+        {chapter.slug !== 'video-guide' && (
+          <span className="font-mono text-xs tracking-wider text-accent bg-accent/10 px-2 py-1 rounded">
+            CHAPTER {chapter.number}
+          </span>
+        )}
         <h1 className="text-3xl font-bold">{chapter.title}</h1>
         <p className="text-lg text-muted">{chapter.description}</p>
       </div>

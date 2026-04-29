@@ -35,7 +35,9 @@ export default function LessonPage({ params }: { params: { chapterSlug: string; 
       <div className="text-sm text-muted mb-8">
         <Link href="/" className="hover:text-fg transition-colors">홈</Link>
         <span className="mx-2">/</span>
-        <Link href={`/chapters/${chapter.slug}`} className="hover:text-fg transition-colors">CHAPTER {chapter.number}</Link>
+        <Link href={`/chapters/${chapter.slug}`} className="hover:text-fg transition-colors">
+          {chapter.slug === 'video-guide' ? chapter.title : `CHAPTER ${chapter.number}`}
+        </Link>
         <span className="mx-2">/</span>
         <span className="text-fg">LESSON {lesson.number}</span>
       </div>

@@ -44,7 +44,7 @@ export default function Sidebar() {
                 ) : (
                   <ChevronRight className="w-4 h-4 mr-1" />
                 )}
-                CHAPTER {chapter.number}
+                {chapter.slug === 'video-guide' ? chapter.title : `CHAPTER ${chapter.number}`}
               </button>
               
               {openChapters[chapter.slug] && (
